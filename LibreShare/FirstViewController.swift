@@ -9,12 +9,15 @@
 import UIKit
 
 class FirstViewController: UIViewController {
-
+    @IBOutlet var titleLabel: UILabel!
+    @IBOutlet var mainLabel : UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
     }
 
+    @IBAction func getEntries_click(_ sender : UIButton){
+        
+    }
 
 }
 
