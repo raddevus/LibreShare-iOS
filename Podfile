@@ -7,5 +7,5 @@ target 'LibreShare' do
 
   # Pods for LibreShare
   pod 'Firebase/Core'
-
+  pod 'Firebase/Database'
 end
