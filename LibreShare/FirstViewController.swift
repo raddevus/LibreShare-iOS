@@ -16,7 +16,7 @@ class FirstViewController: UIViewController {
     }
 
     @IBAction func getEntries_click(_ sender : UIButton){
-        
+        titleLabel.text = "I have changed!"
     }
 
 }

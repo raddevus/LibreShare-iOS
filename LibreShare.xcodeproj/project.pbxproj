@@ -13,6 +13,8 @@
 		63206E7222333A3B00A3091E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 63206E7022333A3B00A3091E /* Main.storyboard */; };
 		63206E7422333A3D00A3091E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 63206E7322333A3D00A3091E /* Assets.xcassets */; };
 		63206E7722333A3D00A3091E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 63206E7522333A3D00A3091E /* LaunchScreen.storyboard */; };
+		63206E7F22345F3C00A3091E /* Enry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63206E7E22345F3C00A3091E /* Enry.swift */; };
+		63206E812234699F00A3091E /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 63206E802234699F00A3091E /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,8 @@
 		63206E7322333A3D00A3091E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		63206E7622333A3D00A3091E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		63206E7822333A3D00A3091E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		63206E7E22345F3C00A3091E /* Enry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Enry.swift; sourceTree = "<group>"; };
+		63206E802234699F00A3091E /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +60,7 @@
 		63206E6922333A3B00A3091E /* LibreShare */ = {
 			isa = PBXGroup;
 			children = (
+				63206E802234699F00A3091E /* GoogleService-Info.plist */,
 				63206E6A22333A3B00A3091E /* AppDelegate.swift */,
 				63206E6C22333A3B00A3091E /* FirstViewController.swift */,
 				63206E6E22333A3B00A3091E /* SecondViewController.swift */,
@@ -63,6 +68,7 @@
 				63206E7322333A3D00A3091E /* Assets.xcassets */,
 				63206E7522333A3D00A3091E /* LaunchScreen.storyboard */,
 				63206E7822333A3D00A3091E /* Info.plist */,
+				63206E7E22345F3C00A3091E /* Enry.swift */,
 			);
 			path = LibreShare;
 			sourceTree = "<group>";
@@ -126,6 +132,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				63206E7722333A3D00A3091E /* LaunchScreen.storyboard in Resources */,
+				63206E812234699F00A3091E /* GoogleService-Info.plist in Resources */,
 				63206E7422333A3D00A3091E /* Assets.xcassets in Resources */,
 				63206E7222333A3B00A3091E /* Main.storyboard in Resources */,
 			);
@@ -141,6 +148,7 @@
 				63206E6F22333A3B00A3091E /* SecondViewController.swift in Sources */,
 				63206E6B22333A3B00A3091E /* AppDelegate.swift in Sources */,
 				63206E6D22333A3B00A3091E /* FirstViewController.swift in Sources */,
+				63206E7F22345F3C00A3091E /* Enry.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
