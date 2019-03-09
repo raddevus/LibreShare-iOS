@@ -15,9 +15,11 @@
 		63206E7722333A3D00A3091E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 63206E7522333A3D00A3091E /* LaunchScreen.storyboard */; };
 		63206E7F22345F3C00A3091E /* Enry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63206E7E22345F3C00A3091E /* Enry.swift */; };
 		63206E812234699F00A3091E /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 63206E802234699F00A3091E /* GoogleService-Info.plist */; };
+		9879164DAA85650199DB070F /* Pods_LibreShare.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E3E1C4C3151EC6203115B857 /* Pods_LibreShare.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		271B46990090313AF409E347 /* Pods-LibreShare.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LibreShare.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LibreShare/Pods-LibreShare.debug.xcconfig"; sourceTree = "<group>"; };
 		63206E6722333A3B00A3091E /* LibreShare.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LibreShare.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		63206E6A22333A3B00A3091E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		63206E6C22333A3B00A3091E /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
@@ -28,6 +30,8 @@
 		63206E7822333A3D00A3091E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		63206E7E22345F3C00A3091E /* Enry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Enry.swift; sourceTree = "<group>"; };
 		63206E802234699F00A3091E /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		C13C612C062807546D3F30B5 /* Pods-LibreShare.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LibreShare.release.xcconfig"; path = "Pods/Target Support Files/Pods-LibreShare/Pods-LibreShare.release.xcconfig"; sourceTree = "<group>"; };
+		E3E1C4C3151EC6203115B857 /* Pods_LibreShare.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LibreShare.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -35,17 +39,29 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9879164DAA85650199DB070F /* Pods_LibreShare.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4D92E37374342967CA3E6ED4 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				271B46990090313AF409E347 /* Pods-LibreShare.debug.xcconfig */,
+				C13C612C062807546D3F30B5 /* Pods-LibreShare.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		63206E5E22333A3B00A3091E = {
 			isa = PBXGroup;
 			children = (
 				63206E6922333A3B00A3091E /* LibreShare */,
 				63206E6822333A3B00A3091E /* Products */,
+				4D92E37374342967CA3E6ED4 /* Pods */,
+				9CD85543F516C6391D54092B /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -73,6 +89,14 @@
 			path = LibreShare;
 			sourceTree = "<group>";
 		};
+		9CD85543F516C6391D54092B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E3E1C4C3151EC6203115B857 /* Pods_LibreShare.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -80,9 +104,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 63206E7B22333A3D00A3091E /* Build configuration list for PBXNativeTarget "LibreShare" */;
 			buildPhases = (
+				B3989102626173E119398161 /* [CP] Check Pods Manifest.lock */,
 				63206E6322333A3B00A3091E /* Sources */,
 				63206E6422333A3B00A3091E /* Frameworks */,
 				63206E6522333A3B00A3091E /* Resources */,
+				A231C1A08279F51F384161A1 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -139,6 +165,53 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		A231C1A08279F51F384161A1 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-LibreShare/Pods-LibreShare-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-LibreShare/Pods-LibreShare-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B3989102626173E119398161 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-LibreShare-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		63206E6322333A3B00A3091E /* Sources */ = {
@@ -292,6 +365,7 @@
 		};
 		63206E7C22333A3D00A3091E /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 271B46990090313AF409E347 /* Pods-LibreShare.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -310,6 +384,7 @@
 		};
 		63206E7D22333A3D00A3091E /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C13C612C062807546D3F30B5 /* Pods-LibreShare.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
