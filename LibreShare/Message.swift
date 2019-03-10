@@ -13,4 +13,10 @@ class Message{
     init(){
         note = ""
     }
+    func toAnyObject() -> Any {
+        return [
+            "note" : note
+        ]
+    }
 }
+

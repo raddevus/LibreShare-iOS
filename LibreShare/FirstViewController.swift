@@ -32,11 +32,18 @@ class FirstViewController: UIViewController {
         dateFormatter.dateFormat = "yyyy-MMM-dd HH:mm:ss"
         let dateString = dateFormatter.string(from: date)
         
-        ref.child("message").setValue("from Apple! - " + dateString)
+        //ref.child("message").setValue("from Apple! - " + dateString)
         titleLabel.text = dateString
-    postRef.child("AB8763B964DD92B42F4566BE1445E20E8088EF4A").child("52223097E36341DEE340D7D49AF7ED257C13687A")
+        var m : Message = Message()
+        m.note = "updated : " + dateString
+        postRef.child("test").setValue(m.toAnyObject(),withCompletionBlock: {
+            (error: Error?, databaseReference: DatabaseReference) in
+            print("Error while setting value \(error)")
+        })
+    //postRef.child("AB8763B964DD92B42F4566BE1445E20E8088EF4A").child("52223097E36341DEE340D7D49AF7ED257C13687A")
+        postRef.child("Message")
         var refHandle : UInt = postRef.observe(DataEventType.value, with: { (snapshot) in
-            let postDict = snapshot.value as? [Entry]
+            let postDict = snapshot.value as? [Message]
             let x = postDict?.count
         })
         
