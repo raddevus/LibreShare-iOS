@@ -8,15 +8,27 @@
 
 import Foundation
 
-class Message{
+class Message : Hashable{
+    static func == (lhs: Message, rhs: Message) -> Bool {
+        return lhs == rhs
+    }
+    
     var note : String
+    var _id : Int
     init(){
         note = ""
+        _id = 1
     }
     func toAnyObject() -> Any {
         return [
+            "_id" : _id,
             "note" : note
+            
         ]
     }
+    var hashValue: Int {
+        return 1
+    }
+
 }
 

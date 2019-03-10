@@ -41,10 +41,17 @@ class FirstViewController: UIViewController {
             print("Error while setting value \(error)")
         })
     //postRef.child("AB8763B964DD92B42F4566BE1445E20E8088EF4A").child("52223097E36341DEE340D7D49AF7ED257C13687A")
-        postRef.child("Message")
-        var refHandle : UInt = postRef.observe(DataEventType.value, with: { (snapshot) in
-            let postDict = snapshot.value as? [Message]
-            let x = postDict?.count
+        postRef.child("test")
+        var refHandle : UInt = postRef.child("test").observe(DataEventType.value, with: { (snapshot) in
+            let postDict = snapshot.value as! [String : AnyObject]
+            for s : String in postDict.keys{
+                print ("KEYS -> \(s)")
+            }
+            for v : AnyObject in postDict.values{
+                print ("Values -> \(v)")
+            }
+            //let x :AnyObject = postDict.values as AnyObject
+            let x = 6;
         })
         
     }
