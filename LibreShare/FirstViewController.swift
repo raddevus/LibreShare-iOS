@@ -28,7 +28,7 @@ class FirstViewController: UIViewController {
         
         let date = Date()
         let dateFormatter : DateFormatter = DateFormatter()
-       
+        var allMessages : [Message]=[]
         dateFormatter.dateFormat = "yyyy-MMM-dd HH:mm:ss"
         let dateString = dateFormatter.string(from: date)
         
@@ -40,16 +40,33 @@ class FirstViewController: UIViewController {
             (error: Error?, databaseReference: DatabaseReference) in
             print("Error while setting value \(error)")
         })
-    //postRef.child("AB8763B964DD92B42F4566BE1445E20E8088EF4A").child("52223097E36341DEE340D7D49AF7ED257C13687A")
-        postRef.child("test")
+    //.child("AB8763B964DD92B42F4566BE1445E20E8088EF4A").child("52223097E36341DEE340D7D49AF7ED257C13687A")
+        //.child("test")
         var refHandle : UInt = postRef.child("test").observe(DataEventType.value, with: { (snapshot) in
-            let postDict = snapshot.value as! [String : AnyObject]
+            var postDict = snapshot.value as! [String : AnyObject]
+            
             for s : String in postDict.keys{
                 print ("KEYS -> \(s)")
             }
             for v : AnyObject in postDict.values{
                 print ("Values -> \(v)")
+                
             }
+            postDict = snapshot.value as! [String : AnyObject]
+            for item : (String,AnyObject) in postDict{
+                print ("ITEMS -> \(item)")
+                //allMessages.append(Message(id: item.0 as String, note: item.1))
+                print ("item.0 \(item.0)")
+                print ("item.1 \(item.1)")
+                //print (item.String)
+                //print (item.AnyObject)
+            }
+            for msg in allMessages{
+                print ("ID : \(msg._id) Note : \(msg.note)"  )
+            }
+//            for v : AnyObject in postDict.values{
+//                print ("Values -> \(v)")
+//            }
             //let x :AnyObject = postDict.values as AnyObject
             let x = 6;
         })
