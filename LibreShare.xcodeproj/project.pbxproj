@@ -15,6 +15,7 @@
 		63206E7722333A3D00A3091E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 63206E7522333A3D00A3091E /* LaunchScreen.storyboard */; };
 		63206E7F22345F3C00A3091E /* Enry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63206E7E22345F3C00A3091E /* Enry.swift */; };
 		63206E812234699F00A3091E /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 63206E802234699F00A3091E /* GoogleService-Info.plist */; };
+		63206E8322356CCF00A3091E /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63206E8222356CCF00A3091E /* Message.swift */; };
 		9879164DAA85650199DB070F /* Pods_LibreShare.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E3E1C4C3151EC6203115B857 /* Pods_LibreShare.framework */; };
 /* End PBXBuildFile section */
 
@@ -30,6 +31,7 @@
 		63206E7822333A3D00A3091E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		63206E7E22345F3C00A3091E /* Enry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Enry.swift; sourceTree = "<group>"; };
 		63206E802234699F00A3091E /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		63206E8222356CCF00A3091E /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
 		C13C612C062807546D3F30B5 /* Pods-LibreShare.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LibreShare.release.xcconfig"; path = "Pods/Target Support Files/Pods-LibreShare/Pods-LibreShare.release.xcconfig"; sourceTree = "<group>"; };
 		E3E1C4C3151EC6203115B857 /* Pods_LibreShare.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LibreShare.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -85,6 +87,7 @@
 				63206E7522333A3D00A3091E /* LaunchScreen.storyboard */,
 				63206E7822333A3D00A3091E /* Info.plist */,
 				63206E7E22345F3C00A3091E /* Enry.swift */,
+				63206E8222356CCF00A3091E /* Message.swift */,
 			);
 			path = LibreShare;
 			sourceTree = "<group>";
@@ -224,6 +227,7 @@
 			files = (
 				63206E6F22333A3B00A3091E /* SecondViewController.swift in Sources */,
 				63206E6B22333A3B00A3091E /* AppDelegate.swift in Sources */,
+				63206E8322356CCF00A3091E /* Message.swift in Sources */,
 				63206E6D22333A3B00A3091E /* FirstViewController.swift in Sources */,
 				63206E7F22345F3C00A3091E /* Enry.swift in Sources */,
 			);

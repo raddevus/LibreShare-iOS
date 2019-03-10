@@ -8,13 +8,14 @@
 
 import Foundation
 class Entry {
-    
+ 
     var _id : String;
     var title : String;
     var created : String;
     var updated : String;
     
     init(){
+  
         _id = "";
         title = "";
         created = "";
@@ -28,6 +29,6 @@ class Entry {
     /*List<Message> get_allMessages() {
         return _allMessages;
     }
-    
-    List<Message> _allMessages;*/
+     List<Message> _allMessages;*/
+     // #1
 }

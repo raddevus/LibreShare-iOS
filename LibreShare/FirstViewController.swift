@@ -14,11 +14,12 @@ class FirstViewController: UIViewController {
     @IBOutlet var titleLabel: UILabel!
     @IBOutlet var mainLabel : UILabel!
     var ref : DatabaseReference!
+    var postRef : DatabaseReference!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         ref = Database.database().reference()
-        
+        postRef  = Database.database().reference()
     }
 
     @IBAction func getEntries_click(_ sender : UIButton){
@@ -33,6 +34,12 @@ class FirstViewController: UIViewController {
         
         ref.child("message").setValue("from Apple! - " + dateString)
         titleLabel.text = dateString
+    postRef.child("AB8763B964DD92B42F4566BE1445E20E8088EF4A").child("52223097E36341DEE340D7D49AF7ED257C13687A")
+        var refHandle : UInt = postRef.observe(DataEventType.value, with: { (snapshot) in
+            let postDict = snapshot.value as? [Entry]
+            let x = postDict?.count
+        })
+        
     }
 
 }
