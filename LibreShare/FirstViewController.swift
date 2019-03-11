@@ -55,7 +55,16 @@ class FirstViewController: UIViewController {
             postDict = snapshot.value as! [String : AnyObject]
             for item : (String,AnyObject) in postDict{
                 print ("ITEMS -> \(item)")
-                //allMessages.append(Message(id: item.0 as String, note: item.1))
+                var m = Message()
+                //allMessages.append(Message(id: item.1 as String, note: item.1))
+                switch item.0.uppercased(){
+                case ("_ID"):
+                    m._id = item.1 as! NSNumber
+                case ("NOTE"):
+                    m.note = item.1 as! String
+                default:
+                    print("got nothing")
+                }
                 print ("item.0 \(item.0)")
                 print ("item.1 \(item.1)")
                 //print (item.String)
