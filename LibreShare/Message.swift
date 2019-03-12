@@ -8,32 +8,25 @@
 
 import Foundation
 
-class Message :  Hashable{
-    static func == (lhs: Message, rhs: Message) -> Bool {
-        return lhs == rhs
-    }
-    
+class Message :  NSObject {
     init(id : NSNumber, note : String ){
         self._id =  id
         self.note = note
     }
     var note : String
     var _id : NSNumber
-    init(){
+    override init(){
         note = ""
-        _id = 1
+        _id = 3
     }
+    
     func toAnyObject() -> Any {
         return [
             "_id" : _id,
             "note" : note
-            
+
         ]
     }
-    var hashValue: Int {
-        return 1
-    }
-
 }
 
 extension Dictionary where Key: NSObject, Value:AnyObject {

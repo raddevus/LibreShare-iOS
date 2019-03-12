@@ -36,24 +36,24 @@ class FirstViewController: UIViewController {
         titleLabel.text = dateString
         var m : Message = Message()
         m.note = "updated : " + dateString
-        postRef.child("test").setValue(m.toAnyObject(),withCompletionBlock: {
+        postRef.child("test").child("x553").setValue(m.toAnyObject(),withCompletionBlock: {
             (error: Error?, databaseReference: DatabaseReference) in
             print("Error while setting value \(error)")
         })
     //.child("AB8763B964DD92B42F4566BE1445E20E8088EF4A").child("52223097E36341DEE340D7D49AF7ED257C13687A")
         //.child("test")
         var refHandle : UInt = postRef.child("test").observe(DataEventType.value, with: { (snapshot) in
-            var postDict = snapshot.value as! [String : AnyObject]
-            
+            var postDict = snapshot.value as! [String : NSDictionary]
+           
             for s : String in postDict.keys{
                 print ("KEYS -> \(s)")
             }
             for v : AnyObject in postDict.values{
                 print ("Values -> \(v)")
-                
+
             }
-            postDict = snapshot.value as! [String : AnyObject]
-            for item : (String,AnyObject) in postDict{
+            postDict = snapshot.value as! [String : NSDictionary]
+            for item : (String,NSDictionary) in postDict{
                 print ("ITEMS -> \(item)")
                 var m = Message()
                 //allMessages.append(Message(id: item.1 as String, note: item.1))
@@ -63,7 +63,7 @@ class FirstViewController: UIViewController {
                 case ("NOTE"):
                     m.note = item.1 as! String
                 default:
-                    print("got nothing")
+                    print("got nothing : " + item.0.uppercased())
                 }
                 print ("item.0 \(item.0)")
                 print ("item.1 \(item.1)")
