@@ -1,5 +1,5 @@
 //
-//  Enry.swift
+//  Entry.swift
 //  LibreShare
 //
 //  Created by roger deutsch on 3/9/19.
