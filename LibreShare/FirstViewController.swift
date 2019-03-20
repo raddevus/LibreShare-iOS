@@ -79,7 +79,11 @@ class FirstViewController: UIViewController {
             //let x :AnyObject = postDict.values as AnyObject
             let x = 6;
         })
-        
+        postRef.child("AB8763B964DD92B42F4566BE1445E20E8088EF4A").child("52223097E36341DEE340D7D49AF7ED257C13687A").observe(.value) { snapshot in
+            for child in snapshot.children {
+                print ("\(child)")
+            }
+        }
     }
 
 }

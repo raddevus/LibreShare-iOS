@@ -9,22 +9,25 @@
 import Foundation
 
 class Message :  NSObject {
-    init(id : NSNumber, note : String ){
+    init(id : NSNumber, note : String, isComplete : Bool ){
         self._id =  id
         self.note = note
+        self.isComplete = isComplete
     }
     var note : String
     var _id : NSNumber
+    var isComplete : Bool
     override init(){
         note = ""
         _id = 3
+        isComplete = false
     }
     
     func toAnyObject() -> Any {
         return [
             "_id" : _id,
-            "note" : note
-
+            "note" : note,
+            "isComplete" : isComplete
         ]
     }
 }

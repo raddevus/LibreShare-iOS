@@ -13,6 +13,7 @@ class Entry {
     var title : String;
     var created : String;
     var updated : String;
+    var allMessages : [String: NSDictionary]
     
     init(){
   
@@ -20,6 +21,15 @@ class Entry {
         title = "";
         created = "";
         updated = "";
+        allMessages = [:]
+    }
+    
+    init(id:String, title:String,created:String, updated:String, messages : [String:NSDictionary]){
+        _id = id;
+        self.title = title
+        self.created = created
+        self.updated = updated
+        allMessages = messages
     }
     
     func get_id() -> String {
