@@ -7,26 +7,39 @@
 //
 
 import Foundation
-import Firebase
-import FirebaseDatabase
 
 class Message :  NSObject {
+    
+    var note : String
+    var _id : NSNumber
+    var isComplete : Bool
+    
     init(id : NSNumber, note : String, isComplete : Bool ){
         self._id =  id
         self.note = note
         self.isComplete = isComplete
     }
     
-    init(snapshot: DataSnapshot) {
-        var x = snapshot.value as AnyObject
-        self._id = x["_id"] as! NSNumber
-        self.note = x["note"] as! String
-        self.isComplete = x["isComplete"] as! Bool
+    init(snapshot: [String:AnyObject]) {
+        self._id = 0
+        self.note = ""
+        self.isComplete = false;
+        for item in snapshot{
+            switch item.key.uppercased(){
+            case ("_ID"):
+                self._id = item.value as! NSNumber
+            case ("NOTE"):
+                self.note = item.value as! String
+            case ("ISCOMPLETE"):
+                self.isComplete = item.value as! Bool
+            default:
+                print("done")
+            }
+        }
+        
     }
     
-    var note : String
-    var _id : NSNumber
-    var isComplete : Bool
+    
     override init(){
         note = ""
         _id = 3
