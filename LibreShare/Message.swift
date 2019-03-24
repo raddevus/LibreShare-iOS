@@ -7,6 +7,8 @@
 //
 
 import Foundation
+import Firebase
+import FirebaseDatabase
 
 class Message :  NSObject {
     init(id : NSNumber, note : String, isComplete : Bool ){
@@ -14,6 +16,14 @@ class Message :  NSObject {
         self.note = note
         self.isComplete = isComplete
     }
+    
+    init(snapshot: DataSnapshot) {
+        var x = snapshot.value as AnyObject
+        self._id = x["_id"] as! NSNumber
+        self.note = x["note"] as! String
+        self.isComplete = x["isComplete"] as! Bool
+    }
+    
     var note : String
     var _id : NSNumber
     var isComplete : Bool
